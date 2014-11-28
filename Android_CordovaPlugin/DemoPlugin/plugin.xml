@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.agileinfoways.plugin"
+    version="0.0.1">
+    <name>DemoPlugin</name>
+    <description>The Demo Plugin implemented By Agile Infoways</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,agile,demo</keywords>
+    <repo></repo>
+    <issue></issue>
+    <js-module src="www/DemoPlugin.js" name="DemoPlugin">
+        <clobbers target="DemoPlugin" />
+    </js-module>
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="DemoPlugin" >
+                <param name="android-package" value="com.agileinfoways.plugin.DemoPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/DemoPlugin.java" target-dir="src/com/agileinfoways/plugin" />
+    </platform>
+</plugin>
